@@ -37,7 +37,7 @@ sudo -u www-data php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac6
 sudo -u www-data php composer-setup.php
 sudo -u www-data php -r "unlink('composer-setup.php');"
 
-using composer
+#using composer
 sudo -u www-data php composer.phar install
 sudo -u www-data php composer.phar update
 
