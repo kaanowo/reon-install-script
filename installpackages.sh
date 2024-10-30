@@ -12,7 +12,7 @@ echo "Installing needed packages..."
 
 
 apt-get --yes update
-apt-get --yes install apache2 php php-mysqli mariadb-server unzip make bison libpng-dev pkg-config nodejs npm python-is-python3 python3-pymysql php-twig libphp-phpmailer
+apt-get --yes install apache2 php php-mysqli mariadb-server unzip make bison libpng-dev pkg-config nodejs npm python-is-python3 python3-pymysql
 
 
 echo "Packages installed!"
