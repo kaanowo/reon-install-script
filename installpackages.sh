@@ -11,7 +11,8 @@ set -eo pipefail
 echo "Installing needed packages..."
 
 
-apt-get --yes update 2>&1 | tee -a $logfile
-apt-get --yes install apache2 php php-mysqli mariadb-server unzip make bison libpng-dev pkg-config nodejs npm python-is-python3 python3-pymysql php-twig 2>&1 | tee -a $logfile
+apt-get --yes update
+apt-get --yes install apache2 php php-mysqli mariadb-server unzip make bison libpng-dev pkg-config nodejs npm python-is-python3 python3-pymysql php-twig php-libphp-phpmailer
+
 
 echo "Packages installed!"

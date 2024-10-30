@@ -29,17 +29,17 @@ sudo find /var/www -type d -exec chmod 2750 {} \+
 sudo find /var/www -type f -exec chmod 640 {} \+
 
 
-echo "Installing comoposer locally for /var/www/web/..."
+#echo "Installing comoposer locally for /var/www/web/..."
 
 
-sudo -u www-data php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-sudo -u www-data php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-sudo -u www-data php composer-setup.php
-sudo -u www-data php -r "unlink('composer-setup.php');"
+#sudo -u www-data php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+#sudo -u www-data php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+#sudo -u www-data php composer-setup.php
+#sudo -u www-data php -r "unlink('composer-setup.php');"
 
 #using composer
-sudo -u www-data php composer.phar install
-sudo -u www-data php composer.phar update
+#sudo -u www-data php composer.phar install
+#sudo -u www-data php composer.phar update
 
 echo "<VirtualHost *:80>
 ServerName gameboy.datacenter.ne.jp

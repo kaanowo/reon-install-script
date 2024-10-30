@@ -13,24 +13,26 @@ echo "Building news for the news-machine."
 
 cd /var/www/
 
-git clone https://github.com/kabili207/pokecrystal-news-en 2>&1 | tee -a $logfile
+git clone https://github.com/kabili207/pokecrystal-news-en
 
 cp config.json /var/www/pokecrystal-news-en/
 
 cd pokecrystal-news-en
 
-wget https://github.com/gbdev/rgbds/releases/download/v0.6.0/rgbds-0.6.0.tar.gz 2>&1 | tee -a $logfile
+wget https://github.com/gbdev/rgbds/releases/download/v0.6.0/rgbds-0.6.0.tar.gz
 
-tar xvf rgbds-0.6.0.tar.gz 2>&1 | tee -a $logfile
+tar xvf rgbds-0.6.0.tar.gz
 
 cd rgbds/
 
-make install PREFIX=../ 2>&1 | tee -a $logfile
+make install PREFIX=../
 
 cd ..
 
-make RGBDS=./bin/ news all 2>&1 | tee -a $logfile
+make RGBDS=./bin/ news all
 
-./deploy.py 2>&1 | tee -a $logfile
+./deploy.py
+
+rm /var/www/pokecrystal-news-en/config.json
 
 echo "News have been added to the database."

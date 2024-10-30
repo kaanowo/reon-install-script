@@ -30,4 +30,6 @@ read -p "Enter your preferred subdomain (USE EXACTLY 4 LETTERS): " subdomain
 . ./mailservice.sh 2>&1 | tee -a $logfile
 . ./newsscript.sh 2>&1 | tee -a $logfile
 
+systemctl start reonmail.service
 
+echo "Your Server is now installed."
